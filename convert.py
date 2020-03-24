@@ -11,7 +11,7 @@ def parse_args():
     """
     parser = argparse.ArgumentParser(description='Convert Open Images annotations into MS Coco format')
     parser.add_argument('-p', dest='path',
-                        help='path to openimages data', 
+                        help='path to openimages data',
                         type=str)
     args = parser.parse_args()
     return args
@@ -20,7 +20,7 @@ args = parse_args()
 data_dir = args.path
 annotation_dir = '{}{}'.format(data_dir, 'annotations')
 
-for subset in ['val', 'test', 'train']:
+for subset in ['val', 'train']:
     print('converting {} data'.format(subset))
     # Select corresponding image directory
     image_dir = '{}{}'.format(data_dir, subset)
